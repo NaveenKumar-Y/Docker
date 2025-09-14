@@ -1,0 +1,12 @@
+groups:
+- name: InstanceDown
+  rules:
+  - alert: InstanceDown
+    expr: up == 0
+    for: 1m
+    labels:
+      team: devOps
+      severity: critical
+    annotations:
+      summary: "Instance {{ $labels.instance }} is down"
+      description: "No response for more than 1 minute."
