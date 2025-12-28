@@ -8,11 +8,14 @@ env:
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
   AWS_ACCOUNT_ID: ${{ vars.AWS_ACCOUNT_ID }}
 
+defaults:
+  run:
+    working-directory: ./FastApi_simple_app
+
 jobs:
   
   build:
     runs-on: ubuntu-latest
-    working-directory: ./FastApi_simple_app
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
