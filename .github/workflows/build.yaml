@@ -12,6 +12,7 @@ jobs:
   
   build:
     runs-on: ubuntu-latest
+    working-directory: ./FastApi_simple_app
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
